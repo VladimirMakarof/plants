@@ -1,30 +1,26 @@
 @font-face {
-  font-family: Roboto-Regular-400;
-  src: url("/fonts/Roboto-Regular.ttf");
-}
-@font-face {
   font-family: Inika-Regular-400;
-  src: url("/fonts/Inika-Regular.ttf");
+  src: url("./fonts/Inika-Regular.ttf");
 }
 @font-face {
   font-family: Inter-Bold-700;
-  src: url("/fonts/Inter-Bold.ttf");
+  src: url("./fonts/Inter-Bold.ttf");
 }
 @font-face {
   font-family: Inter-Light-300;
-  src: url("/fonts/Inter-Light.ttf");
+  src: url("./fonts/Inter-Light.ttf");
 }
 @font-face {
   font-family: Inter-Regular-400;
-  src: url("/fonts/Inter-Regular.ttf");
+  src: url("./fonts/Inter-Regular.ttf");
 }
 @font-face {
   font-family: Inter-SemiBold-600;
-  src: url("/fonts/Inter-SemiBold.ttf");
+  src: url("./fonts/Inter-SemiBold.ttf");
 }
 @font-face {
   font-family: Inika-Bold-700;
-  src: url("/fonts/Inika-Bold.ttf");
+  src: url("./fonts/Inika-Bold.ttf");
 }
 :root {
   /* color  */
