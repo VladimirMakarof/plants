@@ -5,16 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/normalize.css">
-  <link rel="preload" href="fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="fonts/Inika-Regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="fonts/Inika-Bold.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="fonts/Inter-Light.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="fonts/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="fonts/Inter-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="fonts/Inter-Bold.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="preload" href="/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="/fonts/Inika-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="/fonts/Inika-Bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="/fonts/Inter-Light.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="/fonts/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="/fonts/Inter-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="/fonts/Inter-Bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
   <title>Plants</title>
 </head>
 
@@ -23,7 +23,7 @@
     <div class="container">
       <div class="header__container">
         <div class="logo__section-img">
-          <img loading="lazy" src="img/logo_vector.svg" class="image-logo" width="20" height="20"
+          <img loading="lazy" src="./img/logo_vector.svg" class="image-logo" width="20" height="20"
             alt="logo">
         </div>
         <div class="logo__section">
@@ -51,30 +51,32 @@
 
         </nav>
       </div>
-      <div class="hero__container">
-        <div class="hero__container-img">
-          <img loading="lazy" src="/img/leafs.svg" class="image" width="448" height="440"
+      <section class="welcome">
+        <div class="welcome-img">
+          <img loading="lazy" src="./img/leafs.svg" class="image" width="448" height="440"
             alt="lists">
         </div>
-        <div class="hero__container-text-section">
-          <h1 class="hero__container-title">We grow <span class="text-green">plants</span> and give
+        <div class="welcome-text-section">
+          <h1 class="welcome-title">We grow <span class="text-green">plants</span> and give
             you oxygen</h1>
-          <p class="hero__container-text">Lorem Ipsum is simply dummy text of the printing and
+          <p class="welcome-text">Lorem Ipsum is simply dummy text of the printing and
             typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s.</p>
-          <button class="hero__container-button">LEARN MORE</button>
+          <button type="button" class="welcome-button">LEARN MORE</button>
         </div>
-      </div>
+      </section>
     </div>
   </header>
   <main class="main">
     <div class="container">
-      <section class="professional__section">
-        <div class="professional__section-text-box">
-          <h2 class="professional__section-text-box-title"><span class="text-green">We are</span>
-            professional experienced <span class="text-green"></span> gardeners </h2>
+      <section class="about">
+        <div class="about-text-box">
+          <h2 class="about-text-box-title"><span class="text-green">We are</span>
+            <span class="text-orange">professional experienced</span> <span
+              class="text-green">gardeners</span>
+          </h2>
 
-          <p class="professional__section-text-box-text">Lorem Ipsum is simply dummy text of the
+          <p class="about-text-box-text">Lorem Ipsum is simply dummy text of the
             printing and typesetting industry. Lorem Ipsum
             has been the
             industry's standard dummy text ever since the 1500s, when an unknown printer took a
@@ -84,13 +86,13 @@
             but also the
             leap into electronic typesetting, remaining essentially unchanged.</p>
         </div>
-        <div class="professional__section-img-box">
-          <img loading="lazy" src="img/houseplant 1.svg" class="image" width="464" height="479"
+        <div class="about-img-box">
+          <img loading="lazy" src="./img/houseplant 1.svg" class="image" width="464" height="479"
             alt="plant">
         </div>
       </section>
     </div>
-    <div class="service">
+    <section class="service">
       <div class="container">
         <div class="service__section">
           <div class="service__section-header">
@@ -106,7 +108,7 @@
           <div class="service__section-cards">
             <div class="service__section-card">
               <div class="service__section-card-img">
-                <img src="/img/1.jpg" alt="photo 1">
+                <img src="./img/1.jpg" alt="photo 1">
               </div>
               <div class="service__section-card-text-block">
                 <h3 class="service__section-card-title">
@@ -119,7 +121,7 @@
             </div>
             <div class="service__section-card">
               <div class="service__section-card-img">
-                <img src="/img/2.jpg" alt="photo 2">
+                <img src="./img/2.jpg" alt="photo 2">
               </div>
               <div class="service__section-card-text-block">
                 <h3 class="service__section-card-title">
@@ -132,7 +134,7 @@
             </div>
             <div class="service__section-card">
               <div class="service__section-card-img">
-                <img src="/img/3.jpg" alt="photo 3">
+                <img src="./img/3.jpg" alt="photo 3">
               </div>
               <div class="service__section-card-text-block">
                 <h3 class="service__section-card-title">
@@ -145,7 +147,7 @@
             </div>
             <div class="service__section-card">
               <div class="service__section-card-img">
-                <img src="/img/4.jpg" alt="photo 4">
+                <img src="./img/4.jpg" alt="photo 4">
               </div>
               <div class="service__section-card-text-block">
                 <h3 class="service__section-card-title">
@@ -158,7 +160,7 @@
             </div>
             <div class="service__section-card">
               <div class="service__section-card-img">
-                <img src="/img/5.jpg" alt="photo 5">
+                <img src="./img/5.jpg" alt="photo 5">
               </div>
               <div class="service__section-card-text-block">
                 <h3 class="service__section-card-title">
@@ -171,7 +173,7 @@
             </div>
             <div class="service__section-card">
               <div class="service__section-card-img">
-                <img src="/img/6.jpg" alt="photo 6">
+                <img src="./img/6.jpg" alt="photo 6">
               </div>
               <div class="service__section-card-text-block">
                 <h3 class="service__section-card-title">
@@ -185,8 +187,88 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    <section class="price">
+      <div class="container">
+        <div class="price-wrapper">
+          <div class="price__left-section">
+            <h2 class="price-title price-title-1">Prices</h2>
+            <div class="price_dropdown-block">
+              <div class="price_dropdown price_dropdown-basics">
+                <div>Basics</div>
+                <div class="price-circle">
+
+                </div>
+              </div>
+
+              <div class="price_dropdown price_dropdown-standart">
+                <div>Standard</div>
+                <div class="price-circle">
+
+                </div>
+              </div>
+              <div class="price_dropdown price_dropdown-proCare">
+                <div>Pro care</div>
+                <div class="price-circle">
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="price__right-section">
+            <h2 class="price-title price-title-2">Our best <span class="text-green">gardeners</span>
+              are ready to
+              help
+              you</h2>
+            <button class="price-button" type="button">Contact us</button>
+            <img loading="lazy" src="/img/leafs-sm.svg" class="price-image" alt="leafs img">
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="container">
+        <div class="contacts_wrapper">
+
+
+          <img loading="lazy" src="/img/contact_woman 1.png" class="contacts-image" alt="woman">
+          <h2 class="contacts-title"><span class="text-green">Contact us</span>
+          </h2>
+          <div class="contacts_dropdown">
+            <div>City</div>
+            <div class="contacts-circle">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-wrapper">
+        <div class="footer-date-block">
+          <p class="footer-date-block-1">©</p>
+          <p class="footer-date-block-2"> 2022</p>
+          <p>github</p>
+        </div>
+        <div class="footer__rss">
+          <h2 class="footer-title">Rolling Scopes School</h2>
+        </div>
+        <div class="footer__social">
+          <img loading="lazy" src="/img/inst 1.svg" class="image__footer-1" width="32" height="32"
+            alt="insta">
+          <img loading="lazy" src="/img/fb 1.svg" class="image__footer-2" width="32" height="32"
+            alt="fb">
+          <img loading="lazy" src="/img/tw 1.svg" class="image__footer-3" width="32" height="32"
+            alt="twiter">
+          <img loading="lazy" src="/img/pinterest 1.svg" class="image__footer-4" width="32"
+            height="32" alt="pinterest">
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
