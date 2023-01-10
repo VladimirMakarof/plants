@@ -124,6 +124,7 @@ li {
 .nav__link:hover {
   font-family: Inika-Bold-700;
   color: var(--beta-color);
+  transition: all 0.25s;
 }
 .welcome {
   display: flex;
@@ -167,6 +168,8 @@ li {
   color: var(--lambda-color);
   /* transform: skew(-10deg); */
   animation: bounce 1s;
+  color: var(--beta-color);
+  transition: all 0.25s;
 }
 @keyframes bounce {
   0%,
@@ -251,6 +254,7 @@ button {
 .service__section-button:hover {
   background-color: var(--beta-color);
   color: var(--lambda-color);
+  transition: all 0.25s;
 }
 .service__section-cards {
   display: flex;
@@ -347,6 +351,7 @@ button {
 .price-button:hover {
   background-color: var(--beta-color);
   color: var(--lambda-color);
+  transition: all 0.25s;
 }
 .price-image {
   width: 156px;
@@ -488,4 +493,5 @@ button {
 }
 .footer__social > li:hover img {
   transform: scale(1.1);
+  transition: all 0.25s;
 }
