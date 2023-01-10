@@ -29,22 +29,22 @@
             <li class="nav__item"><a href="#about" class="nav__link active" data-menu-item
                 data-scroll>Home</a>
             </li>
-            <li class="nav__item"><a href="#trainers" class="nav__link" data-menu-item
+            <li class="nav__item"><a href="#about_us" class="nav__link" data-menu-item
                 data-scroll>About us</a></li>
-            <li class="nav__item"><a href="#cost" class="nav__link" data-menu-item
+            <li class="nav__item"><a href="#service" class="nav__link" data-menu-item
                 data-scroll>Service</a>
             </li>
-            <li class="nav__item"><a href="#cost" class="nav__link" data-menu-item
+            <li class="nav__item"><a href="#price" class="nav__link" data-menu-item
                 data-scroll>Price</a>
             </li>
-            <li class="nav__item"><a href="#cost" class="nav__link" data-menu-item
+            <li class="nav__item"><a href="#сontacts" class="nav__link" data-menu-item
                 data-scroll>Contacts</a>
             </li>
           </ul>
 
         </nav>
       </div>
-      <section class="welcome">
+      <section id="about_us" class="welcome">
         <div class="welcome-img">
           <img loading="lazy" src="./img/leafs.svg" class="image" width="448" height="440"
             alt="lists">
@@ -85,7 +85,7 @@
         </div>
       </section>
     </div>
-    <section class="service">
+    <section id="service" class="service">
       <div class="container">
         <div class="service__section">
           <div class="service__section-header">
@@ -181,7 +181,7 @@
         </div>
       </div>
     </section>
-    <section class="price">
+    <section id="price" class="price">
       <div class="container">
         <div class="price-wrapper">
           <div class="price__left-section">
@@ -220,7 +220,7 @@
 
       </div>
     </section>
-    <section class="contacts">
+    <section id="сontacts" class="contacts">
       <div class="container">
         <div class="contacts_wrapper">
 
@@ -238,30 +238,38 @@
       </div>
     </section>
   </main>
-  <footer class="footer">
+  <section class="footer">
     <div class="container">
       <div class="footer-wrapper">
         <div class="footer-date-block">
           <p class="footer-date-block-1">©</p>
           <p class="footer-date-block-2"> 2022</p>
-          <p>github</p>
+          <a href="https://github.com/VladimirMakarof">
+            <p>github</p>
+          </a>
+
         </div>
-        <div class="footer__rss">
-          <h2 class="footer-title">Rolling Scopes School</h2>
+        <div class="footer__rss"><a href="https://rs.school/js-stage0/">
+            <h2 class="footer-title">Rolling Scopes School</h2>
+          </a>
+
         </div>
-        <div class="footer__social">
-          <img loading="lazy" src="./img/inst.svg" class="image__footer-1" width="32" height="32"
-            alt="insta">
-          <img loading="lazy" src="./img/fb.svg" class="image__footer-2" width="32" height="32"
-            alt="fb">
-          <img loading="lazy" src="./img/tw.svg" class="image__footer-3" width="32" height="32"
-            alt="twiter">
-          <img loading="lazy" src="./img/pinterest.svg" class="image__footer-4" width="32"
-            height="32" alt="pinterest">
-        </div>
+        <ul class="footer__social">
+          <li><a href="https://www.instagram.com/ussrpictures/"><img loading="lazy"
+                src="./img/inst.svg" class="image__footer-1" width="32" height="32" alt="insta"></a>
+          </li>
+          <li><a href="https://www.facebook.com/search/top?q=ussr"><img loading="lazy"
+                src="./img/fb.svg" class="image__footer-2" width="32" height="32" alt="fb"></a></li>
+          <li><a href="https://twitter.com/search?q=ussr&src=typed_query"><img loading="lazy"
+                src="./img/tw.svg" class="image__footer-3" width="32" height="32" alt="twiter"></a>
+          </li>
+          <li><a href="https://ru.pinterest.com/search/pins/?q=ussr&rs=typed"><img loading="lazy"
+                src="./img/pinterest.svg" class="image__footer-4" width="32" height="32"
+                alt="pinterest"></a></li>
+        </ul>
       </div>
     </div>
-  </footer>
+  </section>
 </body>
 
 </html>

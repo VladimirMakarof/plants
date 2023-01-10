@@ -34,12 +34,13 @@
   --theta-color: #d9d9d9;
   --iota-color: #d6e7d2;
   --kappa-color: #aea1a1;
-  /* --lambda-color: hotpink;  */
+  --lambda-color: #ffffff;
 }
 * {
   /*  border: 1px solid #f00;*/
   /* margin: 0;
   padding: 0; */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -51,6 +52,9 @@ body {
 a {
   text-decoration: none;
   cursor: pointer;
+}
+li {
+  list-style-type: none;
 }
 .container {
   max-width: 1440px;
@@ -117,6 +121,10 @@ a {
   font-family: Inika-Bold-700;
   color: var(--beta-color);
 }
+.nav__link:hover {
+  font-family: Inika-Bold-700;
+  color: var(--beta-color);
+}
 .welcome {
   display: flex;
   margin-top: 62px;
@@ -153,6 +161,31 @@ a {
   border: 2px solid var(--beta-color);
   border-radius: 10px;
   padding: 11px 26px;
+}
+.welcome-button:hover {
+  background-color: var(--beta-color);
+  color: var(--lambda-color);
+  /* transform: skew(-10deg); */
+  animation: bounce 1s;
+}
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
 }
 .about {
   display: flex;
@@ -215,6 +248,10 @@ button {
   margin-right: 34px;
   width: 161px;
 }
+.service__section-button:hover {
+  background-color: var(--beta-color);
+  color: var(--lambda-color);
+}
 .service__section-cards {
   display: flex;
   flex-direction: row;
@@ -248,11 +285,11 @@ button {
   margin-bottom: 21px;
 }
 .price {
-  padding-right: 109px;
-  padding-left: 109px;
   padding-bottom: 114px;
 }
 .price-wrapper {
+  padding-right: 109px;
+  padding-left: 109px;
   display: flex;
   justify-content: space-between;
 }
@@ -302,11 +339,14 @@ button {
   padding: 12px 32px;
   margin-left: 10px;
   background-color: transparent;
-
   margin-top: 5px;
   font-family: Inika-Bold-700;
   font-size: 20px;
   line-height: 26px;
+}
+.price-button:hover {
+  background-color: var(--beta-color);
+  color: var(--lambda-color);
 }
 .price-image {
   width: 156px;
@@ -358,7 +398,7 @@ button {
   font-family: Inika-Bold-700;
   font-size: 40px;
   line-height: 52px;
-  padding-top: 24px;
+  padding-top: 25px;
   padding-left: 44px;
 }
 .contacts_dropdown {
@@ -432,7 +472,7 @@ button {
 }
 .footer-title {
   margin-top: 20px;
-  margin-left: 20px;
+  margin-left: 60px;
 }
 .footer__social {
   margin-top: 30px;
@@ -445,4 +485,7 @@ button {
 }
 .image__footer-2 {
   margin-left: 20px;
+}
+.footer__social > li:hover img {
+  transform: scale(1.1);
 }
