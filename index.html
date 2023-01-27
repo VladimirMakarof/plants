@@ -12,9 +12,10 @@
 </head>
 
 <body>
+  <div class="overlay"></div>
   <header class="header">
     <div class="container">
-      <div class="header__container">
+      <div class="header__container wrapper">
         <div class="logo__section-img">
           <img loading="lazy" src="./img/logo_vector.svg" class="image-logo" width="20" height="20"
             alt="logo">
@@ -24,33 +25,42 @@
           <div class="logo__section-text">Plants</div>
 
         </div>
-        <nav class="nav" title="Main menu" data-menu>
-          <ul class="nav__list list-reset">
-            <li class="nav__item"><a href="#about" class="nav__link active" data-menu-item
-                data-scroll>Home</a>
+        <nav class="nav nav__ul" title="Main menu" data-menu>
+          <ul class="nav__list list-reset header__navigation-items">
+            <li class="nav__item"><a href="#about" class="nav__link header__navigation-link"
+                data-title="Home">Home</a>
             </li>
-            <li class="nav__item"><a href="#about_us" class="nav__link" data-menu-item
-                data-scroll>About us</a></li>
-            <li class="nav__item"><a href="#service" class="nav__link" data-menu-item
-                data-scroll>Service</a>
+            <li class="nav__item"><a href="#about_us" class="nav__link header__navigation-link"
+                data-title="About us">About us</a></li>
+            <li class="nav__item"><a href="#service" class="nav__link header__navigation-link"
+                data-title="Service">Service</a>
             </li>
-            <li class="nav__item"><a href="#price" class="nav__link" data-menu-item
-                data-scroll>Price</a>
+            <li class="nav__item"><a href="#price" class="nav__link header__navigation-link"
+                data-title="Price">Price</a>
             </li>
-            <li class="nav__item"><a href="#сontacts" class="nav__link" data-menu-item
-                data-scroll>Contacts</a>
+            <li class="nav__item"><a href="#сontacts" class="nav__link header__navigation-link"
+                data-title="Contacts">Contacts</a>
             </li>
           </ul>
 
         </nav>
+
+        <div class="header-burger">
+          <div class="burger">
+            <span> &nbsp;</span>
+            <span> &nbsp;</span>
+            <span> &nbsp;</span>
+            <span> &nbsp;</span>
+          </div>
+        </div>
+
       </div>
-      <section id="about_us" class="welcome">
+      <section id="about" class="welcome wrapper">
         <div class="welcome-img">
-          <img loading="lazy" src="./img/leafs.svg" class="image" width="448" height="440"
-            alt="lists">
+          <img loading="lazy" src="./img/leafs.svg" class="main-image" alt="lists">
         </div>
         <div class="welcome-text-section">
-          <h1 class="welcome-title">We grow <span class="text-green">plants</span> and give
+          <h1 class="welcome-title">We grow <span class="text-green ">plants</span> and give
             you oxygen</h1>
           <p class="welcome-text">Lorem Ipsum is simply dummy text of the printing and
             typesetting industry. Lorem Ipsum has been the
@@ -62,7 +72,7 @@
   </header>
   <main class="main">
     <div class="container">
-      <section class="about">
+      <section class="about wrapper" id="about_us">
         <div class="about-text-box">
           <h2 class="about-text-box-title"><span class="text-green">We are</span>
             <span class="text-orange">professional experienced</span> <span
@@ -80,28 +90,34 @@
             leap into electronic typesetting, remaining essentially unchanged.</p>
         </div>
         <div class="about-img-box">
-          <img loading="lazy" src="./img/houseplant.svg" class="image" width="464" height="479"
-            alt="plant">
+          <img loading="lazy" src="./img/houseplant.svg" class="about-image" alt="plant">
         </div>
       </section>
     </div>
     <section id="service" class="service">
       <div class="container">
-        <div class="service__section">
+        <div class="service__section wrapper">
           <div class="service__section-header">
             <h2 class="service__section-title"><span class="text-green">Service and our
                 projects</span>
             </h2>
             <div class="service__section-button-block">
-              <button type="button" class="service__section-button">Gardens</button>
-              <button type="button" class="service__section-button">Lawn</button>
-              <button type="button" class="service__section-button">Planting</button>
+              <button type="button" class="service__section-button"
+                data-filter="garden">Gardens</button>
+              <button type="button" class="service__section-button lawn"
+                data-filter="lawn">Lawn</button>
+              <button type="button" class="service__section-button planting"
+                data-filter="planting">Planting</button>
             </div>
           </div>
           <div class="service__section-cards">
-            <div class="service__section-card">
+            <div class="service__section-card garden" data-filter="garden">
               <div class="service__section-card-img">
-                <img src="./img/1.jpg" alt="photo 1">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="./img/1-1.jpg">
+                  <source media="(min-width: 480px)" srcset="./img/1.jpg">
+                  <img src="./img/1.jpg" alt="photo 1">
+                </picture>
               </div>
               <div class="service__section-card-text-block">
                 <h3 class="service__section-card-title">
@@ -112,11 +128,15 @@
                 </p>
               </div>
             </div>
-            <div class="service__section-card">
+            <div class="service__section-card planting" data-filter="planting">
               <div class="service__section-card-img">
-                <img src="./img/2.jpg" alt="photo 2">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="./img/2-2.jpg">
+                  <source media="(min-width: 480px)" srcset="./img/2.jpg">
+                  <img src="./img/2.jpg" alt="photo 2">
+                </picture>
               </div>
-              <div class="service__section-card-text-block">
+              <div class=" service__section-card-text-block">
                 <h3 class="service__section-card-title">
                   Planting
                 </h3>
@@ -125,9 +145,13 @@
                 </p>
               </div>
             </div>
-            <div class="service__section-card">
+            <div class="service__section-card lawn" data-filter="lawn">
               <div class="service__section-card-img">
-                <img src="./img/3.jpg" alt="photo 3">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="./img/3-3.jpg">
+                  <source media="(min-width: 480px)" srcset="./img/3.jpg">
+                  <img src="./img/3.jpg" alt="photo 3">
+                </picture>
               </div>
               <div class="service__section-card-text-block">
                 <h3 class="service__section-card-title">
@@ -138,9 +162,13 @@
                 </p>
               </div>
             </div>
-            <div class="service__section-card">
+            <div class="service__section-card planting" data-filter="planting">
               <div class="service__section-card-img">
-                <img src="./img/4.jpg" alt="photo 4">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="./img/4-4.jpg">
+                  <source media="(min-width: 480px)" srcset="./img/4.jpg">
+                  <img src="./img/4.jpg" alt="photo 4">
+                </picture>
               </div>
               <div class="service__section-card-text-block">
                 <h3 class="service__section-card-title">
@@ -151,9 +179,13 @@
                 </p>
               </div>
             </div>
-            <div class="service__section-card">
+            <div class="service__section-card garden" data-filter="garden">
               <div class="service__section-card-img">
-                <img src="./img/5.jpg" alt="photo 5">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="./img/5-5.jpg">
+                  <source media="(min-width: 480px)" srcset="./img/5.jpg">
+                  <img src="./img/5.jpg" alt="photo 5">
+                </picture>
               </div>
               <div class="service__section-card-text-block">
                 <h3 class="service__section-card-title">
@@ -164,9 +196,14 @@
                 </p>
               </div>
             </div>
-            <div class="service__section-card">
+
+            <div class="service__section-card planting" data-filter="planting">
               <div class="service__section-card-img">
-                <img src="./img/6.jpg" alt="photo 6">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="./img/6-6.jpg">
+                  <source media="(min-width: 480px)" srcset="./img/6.jpg">
+                  <img src="./img/6.jpg" alt="photo 6">
+                </picture>
               </div>
               <div class="service__section-card-text-block">
                 <h3 class="service__section-card-title">
@@ -183,29 +220,54 @@
     </section>
     <section id="price" class="price">
       <div class="container">
-        <div class="price-wrapper">
+        <div class="price-wrapper wrapper">
           <div class="price__left-section">
             <h2 class="price-title price-title-1">Prices</h2>
             <div class="price_dropdown-block">
-              <div class="price_dropdown price_dropdown-basics">
-                <div>Basics</div>
-                <div class="price-circle">
-
+              <div class="price_dropdown-section">
+                <div class="price_dropdown price_dropdown-basics ">
+                  <div>Basics</div>
+                  <div class="price-circle">
+                  </div>
+                </div>
+                <div class="price_dropdown-content">
+                  <p class="price_dropdown-basics-content-text">Release of Letraset sheets
+                    containing Lorem Ipsum passages, and more recently</p>
+                  <p class="price_dropdown-basics-content-price"> <span>$15</span> <span>/ per
+                      hou</span></p>
+                  <button type="button" class="price_dropdown-basics-content-button">Order</button>
+                </div>
+              </div>
+              <div class="price_dropdown-section">
+                <div class="price_dropdown price_dropdown-standart">
+                  <div>Standard</div>
+                  <div class="price-circle">
+                  </div>
+                </div>
+                <div class="price_dropdown-content">
+                  <p class="price_dropdown-standart-content-text">Release of Letraset sheets
+                    containing Lorem Ipsum passages, and more recently</p>
+                  <p class="price_dropdown-standart-content-price"> <span>$25</span> <span>/ per
+                      hou</span></p>
+                  <button type="button"
+                    class="price_dropdown-standart-content-button">Order</button>
+                </div>
+              </div>
+              <div class="price_dropdown-section">
+                <div class="price_dropdown price_dropdown-proCare">
+                  <div>Pro care</div>
+                  <div class="price-circle">
+                  </div>
+                </div>
+                <div class="price_dropdown-content">
+                  <p class="price_dropdown-proCare-content-text">Release of Letraset sheets
+                    containing Lorem Ipsum passages, and more recently</p>
+                  <p class="price_dropdown-proCare-content-price"> <span>$35</span> <span>/ per
+                      hou</span></p>
+                  <button type="button" class="price_dropdown-proCare-content-button">Order</button>
                 </div>
               </div>
 
-              <div class="price_dropdown price_dropdown-standart">
-                <div>Standard</div>
-                <div class="price-circle">
-
-                </div>
-              </div>
-              <div class="price_dropdown price_dropdown-proCare">
-                <div>Pro care</div>
-                <div class="price-circle">
-
-                </div>
-              </div>
             </div>
           </div>
           <div class="price__right-section">
@@ -222,17 +284,39 @@
     </section>
     <section id="сontacts" class="contacts">
       <div class="container">
-        <div class="contacts_wrapper">
-
-
-          <img loading="lazy" src="./img/contact_woman.png" class="contacts-image" alt="woman">
+        <div class="contacts_wrapper wrapper">
+          <picture>
+            <!-- <source media="(min-width: 768px)" srcset="./img/contact_woman-1.png"> -->
+            <source media="(max-width: 768px)" srcset="./img/contact_woman-1.png">
+            <source media="(min-width: 480px)" srcset="./img/contact_woman.png">
+            <img loading="lazy" src="./img/contact_woman.png" class="contacts-image" alt="woman">
+          </picture>
           <h2 class="contacts-title"><span class="text-green">Contact us</span>
           </h2>
-          <div class="contacts_dropdown">
-            <div>City</div>
-            <div class="contacts-circle">
+          <div class="address__block">
+            <div class="dropdown">
+              <div class="contacts_dropdown dropbtn">
+                <div>City</div>
+                <div class="contacts-circle">
+                </div>
 
+              </div>
+              <div id="myDropdown" class="dropdown-content">
+                <div class="dropdown-link">Canandaigua, NY</div>
+                <div class="dropdown-link">New York City</div>
+                <div class="dropdown-link">Yonkers, NY</div>
+                <div class="dropdown-link">Sherrill, NY</div>
+              </div>
             </div>
+
+            <!-- <div class="address__block-card">
+              <div class="address__block-city">City: <span class="address__city-span"></span></div>
+              <div class="address__block-phone">Phone: <span class="address__phone-span"></span>
+              </div>
+              <div class="address__block-city">Office address: <span
+                  class="address__address-span"></span></div>
+              <button class="address__block-button" type="button">Call us</button>
+            </div> -->
           </div>
         </div>
       </div>
@@ -240,12 +324,12 @@
   </main>
   <footer class="footer">
     <div class="container">
-      <div class="footer-wrapper">
+      <div class="footer-wrapper wrapper">
         <div class="footer-date-block">
           <p class="footer-date-block-1">©</p>
           <p class="footer-date-block-2"> 2022</p>
           <a href="https://github.com/VladimirMakarof">
-            <p>github</p>
+            <p class="github__link">github</p>
           </a>
 
         </div>
@@ -270,6 +354,7 @@
       </div>
     </div>
   </footer>
+  <script src="./script/script.js"></script>
 </body>
 
 </html>
