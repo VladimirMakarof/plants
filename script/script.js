@@ -66,7 +66,7 @@ function blur() {
     cards.forEach(card => {
       // попытка проверить по заголовкам
       // const title = card.querySelector(".service__section-card-title").textContent
-      console.log(card.dataset['filter']);
+      // console.log(card.dataset['filter']);
       // console.log(activeButtonsClass);
       // для массивов includes
       if (activeButtonsClass.includes(card.dataset['filter'])) {
@@ -83,7 +83,7 @@ function getActiveButtonsClass() {
   let activeButtons = []
 
   btns.forEach((btn) => {
-    // для класс листа contains
+    // класс листа contains
     if (btn.classList.contains('active')) {
       // в дата сетах используется только второе слово, без dataset 
       activeButtons.push(btn.dataset['filter'])
@@ -116,45 +116,9 @@ function getActiveButtonsClass() {
 // accordion
 
 const priceCircle = document.querySelectorAll('.price-circle')
-const priceDropdown = document.querySelectorAll(' ice_dropdown') // получим все элементы с коротким текстом, html коллекцию элементов !! Важно, на коллекцию элементов событие повестить нельзя, нужен перебор
+const priceDropdown = document.querySelectorAll('price_dropdown') // получим все элементы с коротким текстом, html коллекцию элементов !
 
-// =============================================================================
-const accBtn = document.querySelectorAll('.accordion-item');
-const accInfo = document.querySelectorAll('.accordion-info');
 const accControl = document.querySelectorAll('.accordion-control');
-
-accBtn.forEach(item => {
-  item.addEventListener('click', e => {
-    if (e.currentTarget.classList.contains('order-btn')) {
-      e.target.parentNode.classList.add('_show');
-      e.target.parentNode.previousElementSibling.classList.add('_active')
-      e.target.parentNode.previousElementSibling.previousElementSibling.classList.add('_active')
-    } else if (e.target.classList.contains('_active')) {
-      e.target.classList.remove('_active');
-      e.target.previousElementSibling.classList.remove('_active')
-      e.target.nextElementSibling.classList.remove('_show')
-      return;
-    } else {
-      accBtn.forEach(elem => {
-        elem.classList.remove('_active');
-        elem.childNodes[1].classList.remove('_active')
-        elem.childNodes[3].classList.remove('_active')
-        elem.childNodes[5].classList.remove('_show')
-        if (e.target.classList.contains('order-btn')) {
-          e.target.parentNode.classList.add('_show');
-          e.target.parentNode.previousElementSibling.classList.add('_active')
-          e.target.parentNode.previousElementSibling.previousElementSibling.classList.add('_active')
-        }
-      });
-      e.target.classList.add('_active');
-      e.target.previousElementSibling.classList.add('_active')
-      e.target.nextElementSibling.classList.add('_show')
-    }
-  });
-});
-
-
-// ===================================================================================
 
 // перебор коллекции элементов = for(of)
 
@@ -224,4 +188,129 @@ function close_circle(elem) {
 // }
 
 
-// =
+
+const dropBtn = document.querySelector('.drop-btn');
+const dropContent = document.querySelector('.dropdown-content');
+const dropLinks = document.querySelectorAll('.dropdown-link');
+
+let elem;
+
+
+//dropdown
+
+dropBtn.addEventListener('click', (e) => {
+  e.target.classList.add('_active')
+  e.target.nextElementSibling.classList.toggle('_active')
+  dropContent.classList.toggle('_show');
+})
+
+class Card {
+  constructor(city, phone, address, phoneLink, parentSelector) {
+    this.city = city;
+    this.phone = phone;
+    this.address = address;
+    this.phoneLink = phoneLink;
+    this.parent = document.querySelector(parentSelector);
+  }
+  render() {
+    elem = document.createElement('div');
+    elem.innerHTML = `
+            <div class="drop-inner">
+            <div class="drop-titles">
+                <p class="drop-title">City:</p>
+                <p class="drop-title">Phone:</p>
+                <p class="drop-title">Office address:</p>
+            </div>
+            <div class="drop-info">
+                <p class="info">${this.city}</p>
+                <p class="info">${this.phone}</p>
+                <p class="info">${this.address}</p>
+            </div>
+            </div>
+            <a class="link" href="tel:${this.phoneLink}">
+                Call us
+            </a>`;
+    elem.classList.add('drop-block');
+    this.parent.append(elem);
+  }
+  delete() {
+    if (elem) {
+      elem.remove()
+    }
+  }
+}
+
+const arrCards = [new Card(
+  "Canandaigua, NY",
+  "+1\t585\t393 0001",
+  "151 Charlotte Street",
+  "+15853930001",
+  '.contact-dropdown'
+), new Card(
+  "New York City",
+  "+1\t212\t456 0002",
+  "9 East 91st Street",
+  "+12124560002",
+  '.contact-dropdown'
+), new Card(
+  "Yonkers, NY",
+  "+1\t914\t678 0003",
+  "511 Warburton Ave",
+  "+19146780003",
+  '.contact-dropdown'
+), new Card(
+  "Sherrill, NY",
+  "+1\t315\t908 0004",
+  "14 WEST Noyes BLVD",
+  "+13159080004",
+  '.contact-dropdown'
+)]
+
+dropLinks.forEach((link, i) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (e.target.classList.contains('dropdown-link')) {
+      dropBtn.textContent = e.target.textContent
+      // console.log(e.target.nextElementSibling)
+      dropContent.classList.toggle('_show');
+      arrCards.forEach(item => {
+        item.delete()
+      })
+      arrCards[i].render()
+    }
+  })
+})
+
+const accBtn = document.querySelectorAll('.accordion-item');
+
+
+//accordion
+
+accBtn.forEach(item => {
+  item.addEventListener('click', (e) => {
+
+    if (item.classList.contains('_active')) {
+      accBtn.forEach(elem => {
+        elem.classList.remove('_active');
+      });
+    } else {
+      accBtn.forEach(elem => {
+        elem.classList.remove('_active');
+      });
+
+      item.classList.toggle('_active')
+    }
+  });
+});
+console.log(`Максимальная оценка за задание 100 баллов`)
+console.log(`При нажатии на кнопки:Gargens,Lawn,Planting происходит смена фокуса на услугах в разделе service +50
+При выборе одной услуги(нажатии одной кнопки), остальные карточки услуг принимают эффект blur, выбранная услуга остается неизменной + 20
+Пользователь может нажать одновременно две кнопки услуги, тогда эта кнопка тоже принимает стиль активной и карточки с именем услуги выходят из эффекта blur.При этом пользователь не может нажать одновременно все три кнопки услуг.При повторном нажатии на активную кнопку она деактивируется(становится неактивной) а привязанные к ней позиции возвращаются в исходное состояние(входит в состяние blur если есть еще активная кнопка или же перестають быть в блюре если это была единственная нажатая кнопка). + 20
+Анимации плавного перемещения кнопок в активное состояние и карточек услуг в эффект blur + 10`)
+console.log(`Accordion в секции prices реализация 3-х выпадающих списков об услугах и ценах + 50
+При нажатии на dropdown кнопку появляется описание тарифов цен в соответствии с макетом. Внутри реализована кнопка order, которая ведет на секцию contacts, при нажатии на нее Accordion все еще остается открытым. +25
+Пользователь может самостоятельно закрыть содержимое нажав на кнопку dropup, но не может одновременно открыть все тарифы услуг, при открытии нового тарифа предыдущее автоматически закрывается. +25`);
+console.log(`В разделе contacts реализован select с выбором городов +25
+В зависимости от выбора пользователя появляется блок с адресом и телефоном офиса в определенном городе +15
+При нажатии на кнопку Call us реализован вызов по номеру, который соответствует выбранному городу +10`)

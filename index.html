@@ -111,7 +111,7 @@
             </div>
           </div>
           <div class="service__section-cards">
-            <div class="service__section-card garden" data-filter="garden">
+            <div class="service__section-card garden">
               <div class="service__section-card-img">
                 <picture>
                   <source media="(max-width: 768px)" srcset="./img/1-1.jpg">
@@ -223,52 +223,71 @@
         <div class="price-wrapper wrapper">
           <div class="price__left-section">
             <h2 class="price-title price-title-1">Prices</h2>
-            <div class="price_dropdown-block">
-              <div class="price_dropdown-section">
-                <div class="price_dropdown price_dropdown-basics ">
-                  <div>Basics</div>
-                  <div class="price-circle">
+            <ul class="price-accordion">
+              <li class="accordion-item">
+                <div class="accordion-control">
+                  <svg width="6" height="4" viewBox="0 0 6 4" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.00003 2.99997L1.00002 1.00008" stroke="#717171" stroke-width="0.5"
+                      stroke-linecap="round" />
+                    <path d="M3 3L5 1" stroke="#717171" stroke-width="0.5" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <button class="accordion-btn" type="button">Basics</button>
+                <div class="accordion-info">
+                  <div class="accordion-desc">Release of Letraset sheets containing Lorem Ipsum
+                    passages,
+                    and
+                    more recently</div>
+                  <div class="accordion-price">
+                    <p>$</p>15 <span>/ per hour</span>
                   </div>
+                  <button class="order-btn" type="button">Order</button>
                 </div>
-                <div class="price_dropdown-content">
-                  <p class="price_dropdown-basics-content-text">Release of Letraset sheets
-                    containing Lorem Ipsum passages, and more recently</p>
-                  <p class="price_dropdown-basics-content-price"> <span>$15</span> <span>/ per
-                      hou</span></p>
-                  <button type="button" class="price_dropdown-basics-content-button">Order</button>
+              </li>
+              <li class="accordion-item">
+                <div class="accordion-control item-2">
+                  <svg width="6" height="4" viewBox="0 0 6 4" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.00003 2.99997L1.00002 1.00008" stroke="#717171" stroke-width="0.5"
+                      stroke-linecap="round" />
+                    <path d="M3 3L5 1" stroke="#717171" stroke-width="0.5" stroke-linecap="round" />
+                  </svg>
                 </div>
-              </div>
-              <div class="price_dropdown-section">
-                <div class="price_dropdown price_dropdown-standart">
-                  <div>Standard</div>
-                  <div class="price-circle">
+                <button class="accordion-btn" type="button">Standart</button>
+                <div class="accordion-info">
+                  <div class="accordion-desc">Release of Letraset sheets containing Lorem Ipsum
+                    passages,
+                    and
+                    more recently</div>
+                  <div class="accordion-price">
+                    <p>$</p>25 <span>/ per hour</span>
                   </div>
+                  <button class="order-btn" type="button">Order</button>
                 </div>
-                <div class="price_dropdown-content">
-                  <p class="price_dropdown-standart-content-text">Release of Letraset sheets
-                    containing Lorem Ipsum passages, and more recently</p>
-                  <p class="price_dropdown-standart-content-price"> <span>$25</span> <span>/ per
-                      hou</span></p>
-                  <button type="button"
-                    class="price_dropdown-standart-content-button">Order</button>
+              </li>
+              <li class="accordion-item">
+                <div class="accordion-control item-3">
+                  <svg width="6" height="4" viewBox="0 0 6 4" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.00003 2.99997L1.00002 1.00008" stroke="#717171" stroke-width="0.5"
+                      stroke-linecap="round" />
+                    <path d="M3 3L5 1" stroke="#717171" stroke-width="0.5" stroke-linecap="round" />
+                  </svg>
                 </div>
-              </div>
-              <div class="price_dropdown-section">
-                <div class="price_dropdown price_dropdown-proCare">
-                  <div>Pro care</div>
-                  <div class="price-circle">
+                <button class="accordion-btn" type="button">Pro care</button>
+                <div class="accordion-info">
+                  <div class="accordion-desc">Release of Letraset sheets containing Lorem Ipsum
+                    passages,
+                    and
+                    more recently</div>
+                  <div class="accordion-price">
+                    <p>$</p>35 <span>/ per hour</span>
                   </div>
+                  <button class="order-btn" type="button">Order</button>
                 </div>
-                <div class="price_dropdown-content">
-                  <p class="price_dropdown-proCare-content-text">Release of Letraset sheets
-                    containing Lorem Ipsum passages, and more recently</p>
-                  <p class="price_dropdown-proCare-content-price"> <span>$35</span> <span>/ per
-                      hou</span></p>
-                  <button type="button" class="price_dropdown-proCare-content-button">Order</button>
-                </div>
-              </div>
-
-            </div>
+              </li>
+            </ul>
           </div>
           <div class="price__right-section">
             <h2 class="price-title price-title-2">Our best <span class="text-green">gardeners</span>
@@ -286,7 +305,6 @@
       <div class="container">
         <div class="contacts_wrapper wrapper">
           <picture>
-            <!-- <source media="(min-width: 768px)" srcset="./img/contact_woman-1.png"> -->
             <source media="(max-width: 768px)" srcset="./img/contact_woman-1.png">
             <source media="(min-width: 480px)" srcset="./img/contact_woman.png">
             <img loading="lazy" src="./img/contact_woman.png" class="contacts-image" alt="woman">
@@ -294,12 +312,15 @@
           <h2 class="contacts-title"><span class="text-green">Contact us</span>
           </h2>
           <div class="address__block">
-            <div class="dropdown">
-              <div class="contacts_dropdown dropbtn">
-                <div>City</div>
-                <div class="contacts-circle">
-                </div>
-
+            <div class="contact-dropdown ">
+              <button class="drop-btn" type="button">City</button>
+              <div class="drop-control">
+                <svg width="6" height="4" viewBox="0 0 6 4" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.00003 2.99997L1.00002 1.00008" stroke="#fff" stroke-width="0.5"
+                    stroke-linecap="round" />
+                  <path d="M3 3L5 1" stroke="#fff" stroke-width="0.5" stroke-linecap="round" />
+                </svg>
               </div>
               <div id="myDropdown" class="dropdown-content">
                 <div class="dropdown-link">Canandaigua, NY</div>
@@ -307,16 +328,8 @@
                 <div class="dropdown-link">Yonkers, NY</div>
                 <div class="dropdown-link">Sherrill, NY</div>
               </div>
-            </div>
 
-            <!-- <div class="address__block-card">
-              <div class="address__block-city">City: <span class="address__city-span"></span></div>
-              <div class="address__block-phone">Phone: <span class="address__phone-span"></span>
-              </div>
-              <div class="address__block-city">Office address: <span
-                  class="address__address-span"></span></div>
-              <button class="address__block-button" type="button">Call us</button>
-            </div> -->
+            </div>
           </div>
         </div>
       </div>
@@ -340,7 +353,8 @@
         </div>
         <ul class="footer__social">
           <li><a href="https://www.instagram.com/ussrpictures/"><img loading="lazy"
-                src="./img/inst.svg" class="image__footer-1" width="32" height="32" alt="insta"></a>
+                src="./img/inst.svg" class="image__footer-1" width="32" height="32"
+                alt="instagram"></a>
           </li>
           <li><a href="https://www.facebook.com/search/top?q=ussr"><img loading="lazy"
                 src="./img/fb.svg" class="image__footer-2" width="32" height="32" alt="fb"></a></li>
